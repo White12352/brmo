@@ -13,8 +13,8 @@ jobs:
         run: |
              wget https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar
              wget https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk
-             ls
-      # Runs a set of commands using the runners shell
+             wget https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk
+
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
