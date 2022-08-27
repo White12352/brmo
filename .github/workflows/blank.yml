@@ -8,13 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
       - name: Get lspatch and Roaming
         run: |
              wget https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar
              wget https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk
              wget https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk
-
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
