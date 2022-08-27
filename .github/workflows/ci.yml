@@ -19,4 +19,4 @@ jobs:
              wget https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk
       - name: Run a multi-line script
         run: |
-            java -jar lspatch.jar
+            java -jar lspatch.jar bilibili.apk -m BiliRoaming_1.6.4.apk -o bilibili_roaming.apk
