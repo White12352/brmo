@@ -14,9 +14,9 @@ jobs:
           java-version: 17
       - name: Get
         run: |
-             wget -O https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar lspatcher.jar
-             wget -O https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk BiliRoaming.apk
-             wget -O https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk bilibili.apk
+             wget -O lspatcher.jar https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar
+             wget -O BiliRoaming.apk https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk
+             wget -O bilibili.apk https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk
       - name: Build
         run: |
             java -jar lspatch.jar bilibili.apk -m BiliRoaming.apk -o bilibili_roaming.apk -l 2
