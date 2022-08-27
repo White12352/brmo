@@ -20,3 +20,7 @@ jobs:
       - name: Build
         run: |
             java -jar lspatch.jar bilibili.apk -m BiliRoaming_1.6.4.apk -o bilibili_roaming.apk -l 2
+      - uses: actions/upload-artifact@v3
+        with:
+          name: bilibili_roaming.apk
+          path: bilibili_roaming.apk
