@@ -14,12 +14,12 @@ jobs:
           java-version: 17
       - name: Get
         run: |
-             wget https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar
-             wget https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk
-             wget https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk
+             wget -O https://github.com/LSPosed/LSPatch/releases/download/v0.3.1/lspatch.jar lspatcher.jar
+             wget -O https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.4/BiliRoaming_1.6.4.apk BiliRoaming.apk
+             wget -O https://github.com/emp3826/BiliRoaming-Build/releases/download/original/bilibili.apk bilibili.apk
       - name: Build
         run: |
-            java -jar lspatch.jar bilibili.apk -m BiliRoaming_1.6.4.apk -o bilibili_roaming.apk -l 2
+            java -jar lspatch.jar bilibili.apk -m BiliRoaming.apk -o bilibili_roaming.apk -l 2
       - uses: actions/upload-artifact@v3
         with:
           name: bilibili_roaming.apk
