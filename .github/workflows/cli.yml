@@ -14,4 +14,4 @@ jobs:
           java-version: 17
       - name: Build
         run: |
-            java -jar lspatch.jar -h
+            java -jar lspatch.jar --help
