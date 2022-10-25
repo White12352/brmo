@@ -24,7 +24,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: APK
-          path: /home/runner/work/brmo/brmo/.
+          path: /home/runner/work/brmo/brmo/./
       - name: Upload apk to release
         uses: softprops/action-gh-release@v1
         with:
