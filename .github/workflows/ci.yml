@@ -26,6 +26,5 @@ jobs:
           path: APK
       - name: Upload apk to release
         uses: softprops/action-gh-release@v1
-        if: steps.tag.outputs.status == 'success' && !cancelled()
         with:
-          files: APK
+          files: /home/runner/work/brmo/brmo/APK/*
