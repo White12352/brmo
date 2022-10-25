@@ -19,15 +19,14 @@ jobs:
              wget -O bilibili.apk https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
       - name: Build
         run: |
-            #java -jar lspatch.jar bilibili.apk -m BiliRoaming.apk -o APK -l 2
-            java -jar lspatch.jar bilibili.apk -m BiliRoaming.apk -l 2
+            java -jar lspatch.jar bilibili.apk -m BiliRoaming.apk -o APK -l 2
       - uses: actions/upload-artifact@v3
         with:
           name: APK
-          path: /home/runner/work/brmo/brmo/./*
+          path: APK
       - name: Upload apk to release
         uses: softprops/action-gh-release@v1
         with:
           tag: ${{ github.ref_name }}
           tag_name: rerelease
-          files: /home/runner/work/brmo/brmo/./*
+          files: APK/*
