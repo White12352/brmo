@@ -14,8 +14,8 @@ jobs:
           java-version: 17
       - name: Get
         run: |
-             wget -O lspatch.jar https://github.com/LSPosed/LSPatch/releases/download/v0.5/lspatch.jar
-             wget -O BiliRoaming.apk https://github.com/yujincheng08/BiliRoaming/releases/download/v1.6.7/BiliRoaming_1.6.7.apk
+             wget -O lspatch.jar https://github.com/LSPosed/LSPatch/releases/download/v0.5.1/lspatch.jar
+             wget -O BiliRoaming.apk https://github.com/zjns/BiliRoamingX/releases/download/v1.6.8/BiliRoamingX-v1.6.8.apk
              wget -O bilibili.apk https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
       - name: Build
         run: |
@@ -28,5 +28,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag: ${{ github.ref_name }}
-          tag_name: rerelease
+          tag_name: release
           files: APK/*
